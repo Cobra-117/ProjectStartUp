@@ -47,7 +47,7 @@ public class Database : MonoBehaviour
 
     /*Load a recipe from a json file 
     filename : the name of the database file, without .json*/
-    public Recipe LoadRecipe(string filename)
+    public static Recipe LoadRecipe(string filename)
     {
         string path = Application.dataPath + "database/recipes/recipes/" + filename;
         Recipe recipe = new Recipe();
@@ -56,6 +56,17 @@ public class Database : MonoBehaviour
         recipe = JsonUtility.FromJson<Recipe>(json);
       
         return recipe;
+    }
+
+    public static string[] getRecipesFromCluster(int clusterIndex)
+    {
+        Cluster cluster = new Cluster();
+        /*string json = Resources.Load<TextAsset>(
+            "Databases/Recipes/Cluster/"  + clusterIndex).text;*/
+        return JsonUtility.FromJson<Cluster>(Resources.Load<TextAsset>(
+        "Databases/Recipes/Cluster/"+ clusterIndex.ToString()).text).taggedContents;
+        //cluster = 
+
     }
 }
 
