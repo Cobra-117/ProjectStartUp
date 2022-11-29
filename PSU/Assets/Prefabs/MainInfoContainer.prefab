@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 919d0982aca0f254cb890bd7cd41b496, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6bdbcfdbdd2d273488c79d1a7b0ef68f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -877.192, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -514,10 +514,10 @@ RectTransform:
   m_Father: {fileID: 2820413907400882887}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.3712628, y: 0.17400001}
-  m_AnchorMax: {x: 0.5607543, y: 0.8197827}
-  m_AnchoredPosition: {x: -6.0458984, y: -3.54599}
-  m_SizeDelta: {x: 5.914795, y: 6.914795}
+  m_AnchorMin: {x: 0.3626758, y: 0.3393583}
+  m_AnchorMax: {x: 0.558, y: 1}
+  m_AnchoredPosition: {x: -2.0458984, y: 1.5}
+  m_SizeDelta: {x: 1.9147949, y: 3.914795}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2820413906327480652
 CanvasRenderer:
@@ -547,7 +547,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6bdbcfdbdd2d273488c79d1a7b0ef68f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 919d0982aca0f254cb890bd7cd41b496, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -670,10 +670,10 @@ RectTransform:
   m_Father: {fileID: 2820413906586264261}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.201}
+  m_AnchorMin: {x: 0, y: 0.143}
   m_AnchorMax: {x: 0, y: 0.30900002}
-  m_AnchoredPosition: {x: 263.6649, y: 0}
-  m_SizeDelta: {x: 452.84772, y: -90.92633}
+  m_AnchoredPosition: {x: 689.8162, y: -1.1699219}
+  m_SizeDelta: {x: 1333.0759, y: 2.3399963}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2820413907128165295
 CanvasRenderer:
@@ -766,7 +766,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -42.936462, z: -780.5437, w: -45.003845}
+  m_margin: {x: 0, y: 4.536865, z: 2.4036255, w: -2.1973877}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -860,7 +860,7 @@ GameObject:
   - component: {fileID: 2820413907392679350}
   - component: {fileID: 2820413907392679351}
   m_Layer: 5
-  m_Name: Like button
+  m_Name: Dislike button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -983,7 +983,7 @@ GameObject:
   - component: {fileID: 2820413907400882885}
   - component: {fileID: 2820413907400882886}
   m_Layer: 5
-  m_Name: Dislike button
+  m_Name: Like button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
