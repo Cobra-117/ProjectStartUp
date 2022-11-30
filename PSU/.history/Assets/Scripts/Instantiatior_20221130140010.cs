@@ -25,9 +25,9 @@ public class Instantiatior : MonoBehaviour
         Debug.Log("Index: " + index);
 
         // Get recipe information
-        Recipe recipe = Database.LoadRecipe(index);
+        Recipe recipe = Database.LoadRecipe(index + ".json");
+        Debug.Log("filename: " + index + ".json");
 
-        // Assign to UI element
         GameObject newItem = Instantiate(infoContainerPrefab, transform, false);
         newItem.gameObject.GetComponent<MainInfoContainerView>().AssignInfo(null, recipe.name, "descriptionaaaaaaaaaaaaaaaaaaaaaaaa");
         newItem.transform.SetAsFirstSibling();

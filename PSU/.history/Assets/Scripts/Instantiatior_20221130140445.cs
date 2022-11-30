@@ -27,7 +27,6 @@ public class Instantiatior : MonoBehaviour
         // Get recipe information
         Recipe recipe = Database.LoadRecipe(index);
 
-        // Assign to UI element
         GameObject newItem = Instantiate(infoContainerPrefab, transform, false);
         newItem.gameObject.GetComponent<MainInfoContainerView>().AssignInfo(null, recipe.name, "descriptionaaaaaaaaaaaaaaaaaaaaaaaa");
         newItem.transform.SetAsFirstSibling();

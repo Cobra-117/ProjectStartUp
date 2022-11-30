@@ -7,29 +7,24 @@ public class Instantiatior : MonoBehaviour
 
     public GameObject infoContainerPrefab;
     private RecipeReccomendation recipeReccomendation;
-    private User user;
 
-
-    private void Awake() {
-        // Create user
-        user = new User();
-        user.tags = new int[] {5, 2, 0, 3, 0, 0, 0, 0, 1};
-        user.recipes = new int[] {};
-    }
     
     void InstantiateItem()
     {
+        // Create user
+        User user = new User();
+        user.tags = new int[] {5, 2, 0, 3, 0, 0, 0, 0, 1};
+        user.recipes = new int[] {};
+
         // Get recipe index
         recipeReccomendation = GetComponent<RecipeReccomendation>();
         string index = recipeReccomendation.ChooseBestRecipe(user);
-        Debug.Log("Index: " + index);
 
         // Get recipe information
-        Recipe recipe = Database.LoadRecipe(index);
+        Recipe recipe = Database.LoadRecipe(index + ".json");
 
-        // Assign to UI element
         GameObject newItem = Instantiate(infoContainerPrefab, transform, false);
-        newItem.gameObject.GetComponent<MainInfoContainerView>().AssignInfo(null, recipe.name, "descriptionaaaaaaaaaaaaaaaaaaaaaaaa");
+        newItem.gameObject.GetComponent<MainInfoContainerView>().AssignInfo(null, recipe., "descriptionaaaaaaaaaaaaaaaaaaaaaaaa");
         newItem.transform.SetAsFirstSibling();
     }
 
