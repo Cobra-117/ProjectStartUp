@@ -8,5 +8,5 @@ public class Cluster
 {
     public int index;
     public string name;
-    public string[] taggedContents;
+    public string[] recipes;
 }

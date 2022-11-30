@@ -8,7 +8,7 @@ public class Database : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        test();
+        //test();
     }
 
     // Update is called once per frame
@@ -35,7 +35,6 @@ public class Database : MonoBehaviour
         Recipe recipe = new Recipe();
         recipe = JsonUtility.FromJson<Recipe>(textAsset.text);*/
         Debug.Log("recipe name : " + testLoad.name);
-
     }
 
     /*Do not use for now*/
@@ -51,6 +50,7 @@ public class Database : MonoBehaviour
     {
         string path = Application.dataPath + "database/recipes/recipes/" + filename;
         Recipe recipe = new Recipe();
+        Debug.Log("loading recipe n° " + filename);
         string json = Resources.Load<TextAsset>(
             "Databases/Recipes/Recipes/"  + filename).text;
         recipe = JsonUtility.FromJson<Recipe>(json);
@@ -64,7 +64,7 @@ public class Database : MonoBehaviour
         /*string json = Resources.Load<TextAsset>(
             "Databases/Recipes/Cluster/"  + clusterIndex).text;*/
         return JsonUtility.FromJson<Cluster>(Resources.Load<TextAsset>(
-        "Databases/Recipes/Cluster/"+ clusterIndex.ToString()).text).taggedContents;
+        "Databases/Recipes/Cluster/"+ clusterIndex.ToString()).text).recipes;
         //cluster = 
 
     }
