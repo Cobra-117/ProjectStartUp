@@ -14,8 +14,8 @@ public class RecipeReccomendation : MonoBehaviour
         user.tags = new int[] {5, 2, 0, 3, 0, 0, 0, 0, 1};
         user.recipes = new int[] {};
         UnityEngine.Random.InitState((int)DateTime.Now.Ticks);
-        string recipe =  ChooseBestRecipe(user);
-        Debug.Log("returned recipe: " + recipe);
+        //string recipe =  ChooseBestRecipe(user);
+        //Debug.Log("returned recipe: " + recipe);
     }
 
 
