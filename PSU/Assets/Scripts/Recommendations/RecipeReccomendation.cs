@@ -16,6 +16,9 @@ public class RecipeReccomendation : MonoBehaviour
         UnityEngine.Random.InitState((int)DateTime.Now.Ticks);
         //string recipe =  ChooseBestRecipe(user);
         //Debug.Log("returned recipe: " + recipe);
+        User test = Database.LoadUser();
+        Database.SaveUser(user);
+        Debug.Log("recipes: " + test.recipes[0].ToString());
     }
 
 
@@ -39,6 +42,7 @@ public class RecipeReccomendation : MonoBehaviour
         }
         string res = relevantRecipes[UnityEngine.Random.Range(0, relevantRecipes.Count)];
         //update player
+        user.recipes.Append<int>(int.Parse(res));
         return res;
     }
 
@@ -118,7 +122,7 @@ public class RecipeReccomendation : MonoBehaviour
             }
             //else if (u)
         }
-         for (int i  = 0; i < keptRecipes.Count; i++) {
+        for (int i  = 0; i < keptRecipes.Count; i++) {
             Debug.Log("kept recipe contains: " + keptRecipes[i]);
         }
         return keptRecipes;

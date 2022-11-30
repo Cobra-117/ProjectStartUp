@@ -48,10 +48,29 @@ public class Database : MonoBehaviour
         return recipe;
     }
 
+    /*Get the recipes that are inside a cluster*/
     public static string[] getRecipesFromCluster(int clusterIndex)
     {
         Cluster cluster = new Cluster();
         return JsonUtility.FromJson<Cluster>(Resources.Load<TextAsset>(
         "Databases/Recipes/Cluster/"+ clusterIndex.ToString()).text).recipes;
+    }
+
+    /*Load the local user*/
+    public static User LoadUser()
+    {
+        User user = new User();
+        string dir = Application.persistentDataPath + "/user.json";
+        string text = System.IO.File.ReadAllText(dir);
+        Debug.Log("text : " + text);
+        return JsonUtility.FromJson<User>(text);
+    }
+
+    /*Save the local user*/
+    public static void SaveUser(User user)
+    {
+        string dir = Application.persistentDataPath + "/user.json";
+        string json = JsonUtility.ToJson(user);
+       System.IO.File.WriteAllText(dir, json);
     }
 }
