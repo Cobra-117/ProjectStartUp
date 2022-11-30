@@ -1,0 +1,12 @@
+Name,ID,IsVegetarian,IsVegan,IsGlutenFree,Tags
+Tomato sauce pasta,0,1,1,0,italian;fast-cooking
+Couscous,1,0,0,0,Arabic;long-cooking
+Couscous (vegan),2,1,1,0,Arabic;long-cooking
+Paella,3,0,0,0,Spanish;long-cooking
+Paella (vegetarian),4,1,0,0,Spanish;long-cooking
+Beef Bourgignon,5,0,0,0,French;long-cooking
+Fish n'chips,6,0,0,0,English;medium cooking time
+Fish n'chips (vegetarian),7,1,0,0,English;medium cooking time
+Fish n'chips (vegan),8,1,1,0,English;medium cooking time
+Sushi,9,0,0,0,Japanese;fast-cooking
+Sushi (vegan),10,1,1,0,Japanese;fast-cooking
