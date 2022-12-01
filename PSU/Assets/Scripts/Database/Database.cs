@@ -70,11 +70,22 @@ public class Database : MonoBehaviour
         "Databases/Recipes/Cluster/"+ clusterIndex.ToString()).text).recipes;
     }
 
+    /*Get the recipes that are inside a cluster*/
+    public static string[] getRestaurantFromCluster(int clusterIndex)
+    {
+        RestaurantCluster cluster = new RestaurantCluster();
+        
+        return JsonUtility.FromJson<RestaurantCluster>(Resources.Load<TextAsset>(
+        "Databases/Restaurants/Cluster/"+ clusterIndex.ToString()).text).restaurant;
+    }
+
     /*Load the local user*/
     public static User LoadUser()
     {
         User user = new User();
         string dir = Application.persistentDataPath + "/user.json";
+        if (!System.IO.File.Exists(dir))
+            return null;
         string text = System.IO.File.ReadAllText(dir);
         Debug.Log("text : " + text);
         return JsonUtility.FromJson<User>(text);

@@ -10,3 +10,11 @@ public class Cluster
     public string name;
     public string[] recipes;
 }
+
+[Serializable]
+public class RestaurantCluster
+{
+    public int index;
+    public string name;
+    public string[] restaurant;
+}

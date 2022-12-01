@@ -11,14 +11,15 @@ public class RecipeReccomendation : MonoBehaviour
     void Start()
     {
         User user = new User();
-        user.tags = new int[] {5, 2, 0, 3, 0, 0, 0, 0, 1};
+        user.recipesTags = new int[] {5, 2, 0, 3, 0, 0, 0, 0, 1};
+        user.restaurantsTags = new int[] {5, 2, 0, 3, 0, 0, 0, 0, 1};
         user.recipes = new int[] {};
-        UnityEngine.Random.InitState((int)DateTime.Now.Ticks);
+        //UnityEngine.Random.InitState((int)DateTime.Now.Ticks);
         //string recipe =  ChooseBestRecipe(user);
         //Debug.Log("returned recipe: " + recipe);
-        User test = Database.LoadUser();
-        Database.SaveUser(user);
-        Debug.Log("recipes: " + test.recipes[0].ToString());
+        //User test = Database.LoadUser();
+        //Database.SaveUser(user);
+        //Debug.Log("recipes: " + test.recipes[0].ToString());
     }
 
 
@@ -43,6 +44,7 @@ public class RecipeReccomendation : MonoBehaviour
         string res = relevantRecipes[UnityEngine.Random.Range(0, relevantRecipes.Count)];
         //update player
         user.recipes.Append<int>(int.Parse(res));
+        Database.SaveUser(user);
         return res;
     }
 
@@ -70,10 +72,10 @@ public class RecipeReccomendation : MonoBehaviour
         int bestCluster = -1;
         int besClusterValue = -1;
 
-        for (int i  = 0; i < user.tags.Length; i ++) {
-            if (user.tags[i] > besClusterValue) {
+        for (int i  = 0; i < user.recipesTags.Length; i ++) {
+            if (user.recipesTags[i] > besClusterValue) {
                 bestCluster = i;
-                besClusterValue = user.tags[i];
+                besClusterValue = user.recipesTags[i];
             }
         }
         Debug.Log("best cluster" + bestCluster.ToString() + "value:" +
@@ -89,16 +91,16 @@ public class RecipeReccomendation : MonoBehaviour
         bool alreadySelected = false;
 
         for (int j = 0; j < 5; j ++) {
-            for (int i  = 0; i < user.tags.Length; i ++) {
+            for (int i  = 0; i < user.recipesTags.Length; i ++) {
                 alreadySelected = false;
                 for (int k = 0; k < 5; k++) {
                     if (i == clusters[k]) {
                         alreadySelected = true;
                     }                        
                 }
-                if (alreadySelected == false && user.tags[i] > besClusterValue) {
+                if (alreadySelected == false && user.recipesTags[i] > besClusterValue) {
                     bestCluster = i;
-                    besClusterValue = user.tags[i];
+                    besClusterValue = user.recipesTags[i];
                 }
             }
             clusters[j] = bestCluster;
