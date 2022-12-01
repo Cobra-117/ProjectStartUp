@@ -48,6 +48,20 @@ public class Database : MonoBehaviour
         return recipe;
     }
 
+    /*Load a recipe from a json file 
+    filename : the name of the database file, without .json*/
+    public static Restaurant LoadRestaurant(string filename)
+    {
+        string path = Application.dataPath + "database/recipes/recipes/" + filename;
+        Restaurant restaurant = new Restaurant();
+        Debug.Log("loading recipe n° " + filename);
+        string json = Resources.Load<TextAsset>(
+            "Databases/Recipes/Recipes/"  + filename).text;
+        restaurant = JsonUtility.FromJson<Restaurant>(json);
+      
+        return restaurant;
+    }
+
     /*Get the recipes that are inside a cluster*/
     public static string[] getRecipesFromCluster(int clusterIndex)
     {
@@ -71,6 +85,6 @@ public class Database : MonoBehaviour
     {
         string dir = Application.persistentDataPath + "/user.json";
         string json = JsonUtility.ToJson(user);
-       System.IO.File.WriteAllText(dir, json);
+        System.IO.File.WriteAllText(dir, json);
     }
 }
