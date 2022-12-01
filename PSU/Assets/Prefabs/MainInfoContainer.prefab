@@ -34,10 +34,10 @@ RectTransform:
   m_Father: {fileID: 2820413906586264261}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.30900002}
-  m_AnchorMax: {x: 0, y: 0.3778492}
-  m_AnchoredPosition: {x: 106, y: 2.230011}
-  m_SizeDelta: {x: 139.87927, y: 3.880005}
+  m_AnchorMin: {x: 0, y: 0.3778492}
+  m_AnchorMax: {x: 0, y: 0.4404414}
+  m_AnchoredPosition: {x: 106, y: 4}
+  m_SizeDelta: {x: 139.87927, y: 15.880005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1447460115520072523
 CanvasRenderer:
@@ -699,10 +699,10 @@ RectTransform:
   m_Father: {fileID: 2820413906586264261}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.3166438}
-  m_AnchorMax: {x: 0, y: 0.36882812}
-  m_AnchoredPosition: {x: 778, y: 8}
-  m_SizeDelta: {x: 1156.7, y: 10.7739}
+  m_AnchorMin: {x: 0, y: 0.3778492}
+  m_AnchorMax: {x: 0, y: 0.4404414}
+  m_AnchoredPosition: {x: 778, y: -7}
+  m_SizeDelta: {x: 1156.7, y: -9.226105}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2820413905889563074
 CanvasRenderer:
@@ -734,8 +734,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d45bdc1a29f2bd042a930476038387f0, type: 2}
+  m_sharedMaterial: {fileID: -284930455920781876, guid: d45bdc1a29f2bd042a930476038387f0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1078,7 +1078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5849056, g: 0.33383763, b: 0.33383763, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1128,10 +1128,10 @@ RectTransform:
   m_Father: {fileID: 2820413906586264261}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.143}
-  m_AnchorMax: {x: 0, y: 0.30900002}
-  m_AnchoredPosition: {x: 787.62665, y: -1.1699219}
-  m_SizeDelta: {x: 1137.4551, y: 2.34}
+  m_AnchorMin: {x: 0, y: 0.23813403}
+  m_AnchorMax: {x: 0, y: 0.36635184}
+  m_AnchoredPosition: {x: 787.62665, y: 5.9815063}
+  m_SizeDelta: {x: 1137.4551, y: 2.376999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2820413907128165295
 CanvasRenderer:
@@ -1163,8 +1163,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Description
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 29185b38ddf1662459a0edc126112d4c, type: 2}
+  m_sharedMaterial: {fileID: -4669811898050223293, guid: 29185b38ddf1662459a0edc126112d4c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1224,7 +1224,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 4.536865, z: 2.4036255, w: -2.1973877}
+  m_margin: {x: 0, y: 4.536865, z: 2.4036255, w: 1.324646}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1563,7 +1563,7 @@ GameObject:
   - component: {fileID: 8007115743645596119}
   - component: {fileID: 7748230465308706671}
   m_Layer: 5
-  m_Name: gradient
+  m_Name: gradient down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

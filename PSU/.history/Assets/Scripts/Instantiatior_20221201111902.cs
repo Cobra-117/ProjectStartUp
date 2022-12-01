@@ -59,7 +59,6 @@ public class Instantiatior : MonoBehaviour
 
     private Sprite GetImage(string index)
     {
-        Debug.Log("loading image: " + "RecipeImages/" + index.PadLeft(2, '0') + "_foodpicture");
         return Resources.Load<Sprite>("RecipeImages/" + index.PadLeft(2, '0') + "_foodpicture");
     }
 }

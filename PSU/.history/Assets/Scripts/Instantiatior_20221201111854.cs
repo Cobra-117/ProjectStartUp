@@ -28,7 +28,7 @@ public class Instantiatior : MonoBehaviour
 
         index = recipeReccomendation.ChooseBestRecipe(user);
         recipe = Database.LoadRecipe(index);
-        secondRecipe.AssignInfo(GetImage(index), recipe.name, "descriptino2222 lol");
+        secondRecipe.AssignInfo(null, recipe.name, "descriptino2222 lol");
     }
     
     void InstantiateItem()
@@ -59,7 +59,6 @@ public class Instantiatior : MonoBehaviour
 
     private Sprite GetImage(string index)
     {
-        Debug.Log("loading image: " + "RecipeImages/" + index.PadLeft(2, '0') + "_foodpicture");
         return Resources.Load<Sprite>("RecipeImages/" + index.PadLeft(2, '0') + "_foodpicture");
     }
 }
