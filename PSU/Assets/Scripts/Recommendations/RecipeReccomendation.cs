@@ -33,6 +33,7 @@ public class RecipeReccomendation : MonoBehaviour
         int clusterIndex = ChooseCluster(user);
         getRandomGoodCluster(user);
         string[] availableRecipes = Database.getRecipesFromCluster(clusterIndex);
+        Debug.Log("choosed clueter: " + clusterIndex.ToString());
         Debug.Log("number of recipes: " + availableRecipes);
         //Pick all available recipes (exclude non wanted dishes)
         //Exclude all the already showed recipes
@@ -72,7 +73,7 @@ public class RecipeReccomendation : MonoBehaviour
         int bestCluster = -1;
         int besClusterValue = -1;
 
-        for (int i  = 0; i < user.recipesTags.Length; i ++) {
+        for (int i  = 0; i < 7; i ++) {
             if (user.recipesTags[i] > besClusterValue) {
                 bestCluster = i;
                 besClusterValue = user.recipesTags[i];
@@ -91,7 +92,7 @@ public class RecipeReccomendation : MonoBehaviour
         bool alreadySelected = false;
 
         for (int j = 0; j < 5; j ++) {
-            for (int i  = 0; i < user.recipesTags.Length; i ++) {
+            for (int i  = 0; i < 7; i ++) {
                 alreadySelected = false;
                 for (int k = 0; k < 5; k++) {
                     if (i == clusters[k]) {
