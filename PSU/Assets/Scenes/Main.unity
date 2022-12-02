@@ -1858,15 +1858,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9bdf25737fcc334e8f1b3a372342e2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userSettingsOverlay: {fileID: 1921012946}
-  preferencesOverlay: {fileID: 819196364}
-  joinRoomOverlay: {fileID: 1515283865}
-  createRoomOverlay: {fileID: 1437121965}
-  userSettingsButton: {fileID: 990551130}
-  preferencesButton: {fileID: 680449199}
-  joinRoomButton: {fileID: 1852046223}
-  createRoomButton: {fileID: 1674067690}
-  discoverButton: {fileID: 1415384289}
 --- !u!1 &897034960
 GameObject:
   m_ObjectHideFlags: 0
@@ -2146,17 +2137,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939898203}
   m_CullTransparentMesh: 1
---- !u!114 &990551130 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8552767508973096081, guid: 78a756aeb5a61e644b9dcc6da78760ea, type: 3}
-  m_PrefabInstance: {fileID: 8552767508967326902}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &999030755
 GameObject:
   m_ObjectHideFlags: 0
@@ -3648,7 +3628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1515283866
 RectTransform:
   m_ObjectHideFlags: 0
