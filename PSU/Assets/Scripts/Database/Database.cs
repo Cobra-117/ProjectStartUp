@@ -74,7 +74,7 @@ public class Database : MonoBehaviour
     public static string[] getRestaurantFromCluster(int clusterIndex)
     {
         RestaurantCluster cluster = new RestaurantCluster();
-        
+        Debug.Log("loading cluster " + clusterIndex.ToString());
         return JsonUtility.FromJson<RestaurantCluster>(Resources.Load<TextAsset>(
         "Databases/Restaurants/Cluster/"+ clusterIndex.ToString()).text).restaurant;
     }
