@@ -15,7 +15,7 @@ public class Instantiatior : MonoBehaviour
     private void Awake() {
         // Create user
         user = new User();
-        user.tags = new int[] {5, 2, 0, 3, 0, 0, 0, 0, 1};
+        user.recipesTags = new int[] {5, 2, 0, 3, 0, 0, 0, 0, 1};
         user.recipes = new int[] {};
 
         recipeReccomendation = GetComponent<RecipeReccomendation>();
