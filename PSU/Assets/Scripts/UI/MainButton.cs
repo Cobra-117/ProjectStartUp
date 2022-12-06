@@ -8,6 +8,7 @@ public class MainButton : MonoBehaviour
 
     private void Awake() {
         selectedDot = gameObject.transform.Find("selected dot").gameObject;
+        //Debug.Log("selected dot assigned: " + selectedDot != null);
     }
 
     public void setSelected(bool isSelected)

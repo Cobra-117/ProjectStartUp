@@ -52,11 +52,11 @@ public class Database : MonoBehaviour
     filename : the name of the database file, without .json*/
     public static Restaurant LoadRestaurant(string filename)
     {
-        string path = Application.dataPath + "database/recipes/recipes/" + filename;
+        string path = Application.dataPath + "database/restaurants/restaurants/" + filename;
         Restaurant restaurant = new Restaurant();
-        Debug.Log("loading recipe n° " + filename);
+        Debug.Log("loading restaurant n° " + filename);
         string json = Resources.Load<TextAsset>(
-            "Databases/Recipes/Recipes/"  + filename).text;
+            "Databases/Restaurants/Restaurants/"  + filename).text;
         restaurant = JsonUtility.FromJson<Restaurant>(json);
       
         return restaurant;

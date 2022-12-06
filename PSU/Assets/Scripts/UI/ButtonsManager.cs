@@ -20,16 +20,6 @@ public class ButtonsManager : MonoBehaviour
     private List<GameObject> buttons;
 
 
-    private enum MainStates {
-        Preferences,
-        Discover,
-        UserSettings,
-        CreateRoom,
-        JoinRoom
-    }
-    
-    private MainStates currentState = MainStates.Discover;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -59,8 +49,10 @@ public class ButtonsManager : MonoBehaviour
 
         foreach(GameObject button in  buttons)
         {
+            Debug.Log("ACCESING button " + button);
             // Clear selection dots
             MainButton buttonComponent;
+            
             TryGetComponent<MainButton>(out buttonComponent);
             if(buttonComponent != null) 
             {
