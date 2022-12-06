@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainButtons : MonoBehaviour
+public class MainButton : MonoBehaviour
 {
     private GameObject selectedDot;
 
