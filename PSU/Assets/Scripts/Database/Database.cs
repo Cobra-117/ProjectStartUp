@@ -98,4 +98,12 @@ public class Database : MonoBehaviour
         string json = JsonUtility.ToJson(user);
         System.IO.File.WriteAllText(dir, json);
     }
+
+    public static string getIngredients(int index) 
+    {
+        string ingredients =  Resources.Load<TextAsset>(
+        "Databases/Recipes/Ingredients/"+ index.ToString()).text;
+        Debug.Log("ingredients : " + ingredients);
+        return ingredients;
+    }
 }
