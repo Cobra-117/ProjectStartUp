@@ -11,4 +11,5 @@ public class Recipe
     public bool isVegetarian;
     public bool isVegan;
     public string [] tags;
+    public string [] ingredients;
 }
