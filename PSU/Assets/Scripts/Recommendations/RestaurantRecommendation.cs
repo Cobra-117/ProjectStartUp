@@ -15,8 +15,8 @@ public class RestaurantRecommendation : MonoBehaviour
         user.restaurants = new int[] {};
         UnityEngine.Random.InitState((int)DateTime.Now.Ticks);*/
 
-        string restaurant =  ChooseBestRestaurant(Database.LoadUser());
-        Debug.Log("returned restaurant: " + restaurant);
+        //string restaurant =  ChooseBestRestaurant(Database.LoadUser());
+        //Debug.Log("returned restaurant: " + restaurant);
         //User test = Database.LoadUser();
         //Database.SaveUser(user);
         //Debug.Log("recipes: " + test.recipes[0].ToString());
@@ -71,7 +71,7 @@ public class RestaurantRecommendation : MonoBehaviour
         int bestCluster = -1;
         int besClusterValue = -1;
 
-        for (int i  = 0; i < user.recipesTags.Length; i ++) {
+        for (int i  = 0; i < 4; i ++) {
             if (user.restaurantsTags[i] > besClusterValue) {
                 bestCluster = i;
                 besClusterValue = user.restaurantsTags[i];
@@ -90,7 +90,7 @@ public class RestaurantRecommendation : MonoBehaviour
         bool alreadySelected = false;
 
         for (int j = 0; j < 4; j ++) {
-            for (int i  = 0; i < user.restaurantsTags.Length; i ++) {
+            for (int i  = 0; i < 4; i ++) {
                 alreadySelected = false;
                 for (int k = 0; k < 4; k++) {
                     if (i == clusters[k]) {
@@ -106,7 +106,9 @@ public class RestaurantRecommendation : MonoBehaviour
             bestCluster = -1;
             besClusterValue = -1; 
         }
-        return clusters[UnityEngine.Random.Range(0, 4)];
+        int res = clusters[UnityEngine.Random.Range(0, 4)];
+        Debug.Log("return random cluster n° " + res);
+        return res;
     }
 
     List<string> SortRestaurants(string[] recipes, User user)
