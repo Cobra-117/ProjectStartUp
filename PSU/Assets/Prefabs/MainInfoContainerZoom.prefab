@@ -1446,9 +1446,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2820413907222939266}
-  - component: {fileID: 3756578171501143651}
   - component: {fileID: 5296737454417477194}
-  - component: {fileID: 6458512648915744618}
+  - component: {fileID: 928091528421062296}
+  - component: {fileID: 724356715072010429}
   m_Layer: 5
   m_Name: MainInfoContainerZoom
   m_TagString: Untagged
@@ -1477,21 +1477,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3756578171501143651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2820413907222939267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbf958d9534778e408e88d0780074f32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  image: {fileID: 7796857148583711919}
-  nameText: {fileID: 2820413905889563075}
-  descriptionText: {fileID: 2820413907128165288}
 --- !u!222 &5296737454417477194
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1500,7 +1485,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2820413907222939267}
   m_CullTransparentMesh: 1
---- !u!114 &6458512648915744618
+--- !u!114 &928091528421062296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1509,7 +1494,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 2820413907222939267}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e3e6ea916250944b9f09afb9a863532, type: 3}
+  m_Script: {fileID: 11500000, guid: 82dff7ecce758afcbbe14cd6c2eadd0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 7796857148583711919}
+  nameText: {fileID: 2820413905889563075}
+  descriptionText: {fileID: 2820413907128165288}
+--- !u!114 &724356715072010429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2820413907222939267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c497a7fe212b3f2fa79fd8bbe64efc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   redImage: {fileID: 400756734983214365}
