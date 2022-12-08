@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Instantiatior : MonoBehaviour
 {   // I know it's "Instantiator" (not "Instantiatior") but I realised the typo too late TnT
+    // Also, this code is pretty wonky and not clean at all, so sorry about that
+    public static Instantiatior Instance;
 
     public GameObject infoContainerPrefabZoom;
     public GameObject infoContainerPrefabSwipe;
@@ -28,6 +30,13 @@ public class Instantiatior : MonoBehaviour
         user.restaurantsTags = new int[] {5, 2, 0, 3, 0, 0, 0, 0, 1};
         user.recipes = new int[] {};
         user.restaurants = new int[] {};*/
+        if(Instance != null)
+
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
 
         recipeReccomendation = GetComponent<RecipeReccomendation>();
         restaurantRecommendation = GetComponent<RestaurantRecommendation>();
@@ -129,7 +138,8 @@ public class Instantiatior : MonoBehaviour
         do
         {
             index = recipeReccomendation.ChooseBestRecipe(Database.LoadUser());
-        } while (DisplayedInfoManager.Instance.dislikedRecipes.Contains(index));
+        } while (DisplayedInfoManager.Instance.dislikedRecipes.Contains(index)
+            || index == DisplayedInfoManager.Instance.prevRecipeIndex);
     
 
         // Get recipe information
@@ -165,7 +175,8 @@ public class Instantiatior : MonoBehaviour
         do
         {
             index = restaurantRecommendation.ChooseBestRestaurant(Database.LoadUser());
-        } while (DisplayedInfoManager.Instance.dislikedRestaurants.Contains(index));
+        } while (DisplayedInfoManager.Instance.dislikedRestaurants.Contains(index) 
+            || index == DisplayedInfoManager.Instance.prevRestaurantIndex);
         
         // Get recipe information
         Restaurant restaurant = Database.LoadRestaurant(index);
@@ -206,5 +217,29 @@ public class Instantiatior : MonoBehaviour
     public static void setRestaurantIndex(string index)
     {
         currentRestaurantIndex = index;
+    }
+
+
+    public void showNewRecipeOrRestaurant(string index)
+    {
+        // Find the item that is currently being shown (second child)
+        Transform currentDisplayed = transform.GetChild(1);
+        MainInfoContainerView mainInfoView = currentDisplayed.gameObject.GetComponent<MainInfoContainerView>();
+
+        // Assign the "new" (previous) information
+        if(Switch.Instance.GetIsRecipeSelected())
+        {
+            // Asign first two recipes
+            Recipe recipe = Database.LoadRecipe(index);
+            mainInfoView.AssignInfo(GetRecipeImage(index), recipe.name, "description");
+            currentRecipeIndex = index;      
+        }
+        else
+        {
+            // Asign first two restaurants
+            Restaurant restaurant = Database.LoadRestaurant(index);
+            mainInfoView.AssignInfo(GetRestaurantImage(index), restaurant.name, "description");
+            currentRestaurantIndex = index;
+        }
     }
 }

@@ -8,8 +8,8 @@ public class DisplayedInfoManager : MonoBehaviour
 
     public List<string> dislikedRecipes {get; private set;} = new List<string>();       // List with the indexes of the the disliked recipes
     public List<string> dislikedRestaurants {get; private set;} = new List<string>();   // List with the indexes of the the disliked restaurants
-    string prevRecipeIndex;
-    string prevRestaurantIndex;
+    public string prevRecipeIndex {get; private set;}
+    public string prevRestaurantIndex {get; private set;}
 
     
     void Awake()
@@ -34,6 +34,10 @@ public class DisplayedInfoManager : MonoBehaviour
         {
             prevRecipeIndex = Instantiatior.currentRecipeIndex;
             //Debug.Log("previous recipe: " + prevRecipeIndex);
+        }
+        else
+        {
+            prevRestaurantIndex = Instantiatior.currentRestaurantIndex;
         }
     }
 

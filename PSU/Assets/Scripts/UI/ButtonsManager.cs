@@ -10,6 +10,7 @@ public class ButtonsManager : MonoBehaviour
     [SerializeField] private GameObject joinRoomOverlay;
     [SerializeField] private GameObject createRoomOverlay;
     [SerializeField] private GameObject recipeRestaurantOverlay;
+    [SerializeField] private GameObject roomPreferencesOverlay;
     private List<GameObject> overlays;
 
     [SerializeField] private GameObject userSettingsButton;
@@ -29,6 +30,7 @@ public class ButtonsManager : MonoBehaviour
         overlays.Add(joinRoomOverlay);
         overlays.Add(createRoomOverlay);
         overlays.Add(recipeRestaurantOverlay);
+        overlays.Add(roomPreferencesOverlay);
 
         buttons = new List<GameObject>();
         buttons.Add(userSettingsButton);
